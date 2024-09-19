@@ -29,10 +29,9 @@ class TempBtn extends StatelessWidget {
             curve: Curves.easeInOutBack,
             height: isActive ? 76 : 50,
             width: isActive ? 76 : 50,
-            child: SvgPicture.asset(
-              svgSrc,
-              color: isActive ? activeColor : Colors.white38,
-            ),
+            child: SvgPicture.asset(svgSrc,
+                colorFilter:
+                    ColorFilter.mode(isActive ? activeColor : Colors.white38, BlendMode.src)),
           ),
           const SizedBox(height: defaultPadding / 2),
           AnimatedDefaultTextStyle(
